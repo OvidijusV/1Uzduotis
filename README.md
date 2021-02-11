@@ -36,4 +36,3 @@
   * Paleidus failą iš pradžių pagal programos nurodymus įveskite savo vardą
   * Po vardo įvedimo įveskite norimą rėmelio plotį
   * Atlikus visus žingsnius sugeneruotas paveikslėlis bus atvaizduotas
-

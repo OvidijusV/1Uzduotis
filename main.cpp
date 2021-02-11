@@ -11,9 +11,16 @@ int main(){
     string borderSide1, borderSide2;
 
     // Pasisveikinimo eilutė ir įvestis
-    greetLine = "* Sveikas, ";
     cout << "Enter your name: ";
     cin >> name;
+
+    // Tikrinam vyras ar moteris
+    if(name.back()== 's'){
+        greetLine = "* Sveikas, ";
+    } else {
+        greetLine = "* Sveika, ";
+    }
+
     greetLine += name + " *";
 
     int n = greetLine.size(); // Pasisveikinimo eilutės ilgis

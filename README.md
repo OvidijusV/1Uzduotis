@@ -20,3 +20,19 @@
 *                 *
 *******************
 ```
+[v1.0](https://github.com/OvidijusV/1Uzduotis-OOP/tree/v1.0) Sukurta galimybė, vartotojui pačiam pasirinkti rėmelio plotį
+
+## Funkcijos
+* Vartotojas gali įvesti savo vardą
+* Pasisveikinimas sugeneruojamas pagal įvestą vardą (moteris arba vyrsas)
+* Programa sugeneruoja rėmelį/paveikslėlį su pasisveikinimu per vidury
+
+## Įdiegimo ir naudojimo instrukcija
+* Įdiegimas ir naudojimas
+  * Iš skilties "releases" pasirinkti norimą programos versiją ir atsisiųsti
+  * Atsisiųstą kodą sukompiliuoti
+  * Paleisti gautą vykdomąjį failą (.exe)
+* Naudojimas
+  * Paleidus failą iš pradžių pagal programos nurodymus įveskite savo vardą
+  * Po vardo įvedimo įveskite norimą rėmelio plotį
+  * Atlikus visus žingsnius sugeneruotas paveikslėlis bus atvaizduotas

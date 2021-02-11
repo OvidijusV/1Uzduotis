@@ -3,42 +3,79 @@
 
 using namespace std;
 
+const int k = 15;
+
 int main(){
     // Kintamieji
-    string greetLine;
+    //int k = 15;
     string name;
-    string borderTop, borderBottom;
-    string borderSide1, borderSide2;
+    string greet;
+    string lines[k];
+    int width;
 
     // Pasisveikinimo eilutė ir įvestis
     cout << "Enter your name: ";
     cin >> name;
+    cout << "Enter width:";
+    cin >> width;
+
+    while(width > k){
+        cout << "Enter width(<" << k << "):";
+        cin >> width;
+    }
 
     // Tikrinam vyras ar moteris
     if(name.back()== 's'){
-        greetLine = "* Sveikas, ";
+        greet = "* Sveikas, ";
     } else {
-        greetLine = "* Sveika, ";
+        greet = "* Sveika, ";
     }
 
-    greetLine += name + " *";
+    greet += name + " *";
 
-    int n = greetLine.size(); // Pasisveikinimo eilutės ilgis
+    int n = greet.size(); // Pasisveikinimo eilutės ilgis
 
-    // Viršutinis/apatinis rėmelis
+    // Viršutinis rėmelis
     for (int i = 0; i < n; i++){
-            borderTop += "*";
+            lines[0] += "*";
     };
-    borderBottom = borderTop;
+    cout << lines[0] << endl;
 
-    // Šoniniai rėmeliai (su tarpais)
-    borderSide1 = "*";
-    for (int i = 0; i < n - 2; i++){
-        borderSide1 += " ";
-    };
-    borderSide1 += "*";
-    borderSide2 = borderSide1;
+    // Šoniniai rėmeliai (su tarpais) ^
+    for(int i = 0; i < (width / 2) - 1; i++){
+        lines[i+1] = "*";
+        for(int j = 0; j < n - 2; j++){
+            lines[i+1] += " ";
+        }
+        lines[i+1] += "*";
+    }
+
+    // Šoninių rėmelių spausdinimas
+    for(int i = 0; i < (width / 2) - 1; i++){
+        cout << lines[i+1] << endl;
+    }
     
-    // Spausdinamas įrėmintas pasisveikinimas
-    cout << borderTop << endl << borderSide1 << endl << greetLine << endl << borderSide2 << endl << borderBottom;
+    // Pasisveikinimo spausdinimas
+    cout << greet << endl;
+
+
+    // Šoninio rėmelio generavimas (po pasisveikinimu)
+    for(int i = 0; i < (width / 2) - 1; i++){
+        lines[width / 2 + i] = "*";
+        for(int j = 0; j < n - 2; j++){
+            lines[width / 2 + i] += " ";
+        }
+        lines[width / 2 + i] += "*";
+    }
+
+    // Šoninių rėmelių spausdinimas (po pasisveikinimu)
+    for(int i = 0; i < (width / 2) - 1; i++){
+        cout << lines[width / 2 + i] << endl;
+    }
+
+    // Apatinio rėmelio generavimas ir spausdinimas
+    for (int i = 0; i < n; i++){
+            lines[width - 1] += "*";
+    };
+    cout << lines[width - 1] << endl;
 }
